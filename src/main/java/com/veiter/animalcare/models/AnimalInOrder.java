@@ -45,10 +45,21 @@ public class AnimalInOrder {
     private Integer categoryType;
 
     @NotNull
-    private BigDecimal AnimalPrice;
+    private BigDecimal animalPrice;
 
-    private Integer AnimalStock;
+    private Integer animalStock;
 
     private Integer count;
+
+    public AnimalInOrder(AnimalInfo animalInfo, Integer quantity) {
+        this.animalId = animalInfo.getAnimalId();
+        this.animalName = animalInfo.getAnimalName();
+        this.animalDescription = animalInfo.getAnimalDescription();
+        this.animalIcon = animalInfo.getAnimalIcon();
+        this.categoryType = animalInfo.getAnimalType();
+        this.animalPrice = animalInfo.getAnimalPrice();
+        this.animalStock = animalInfo.getAnimalStock();
+        this.count = quantity;
+    }
 
 }

@@ -5,9 +5,11 @@ import com.veiter.animalcare.models.User;
 import com.veiter.animalcare.repositories.AnimalInOrderRepository;
 import com.veiter.animalcare.services.AnimalInOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.concurrent.atomic.AtomicReference;
 
+@Service
 public class AnimalInOrderServiceImpl implements AnimalInOrderService {
 
     @Autowired

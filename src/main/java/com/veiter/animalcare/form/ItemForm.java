@@ -6,4 +6,6 @@ import lombok.Data;
 public class ItemForm {
 
     private String animalId;
+
+    private Integer quantity;
 }

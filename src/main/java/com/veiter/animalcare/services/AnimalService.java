@@ -5,27 +5,27 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 public interface AnimalService {
-    AnimalInfo findOne(String productId);
+    AnimalInfo findOne(String animalId);
 
-    // All selling products
+    // All selling animals
     Page<AnimalInfo> findUpAll(Pageable pageable);
-    // All products
+    // All animals
     Page<AnimalInfo> findAll(Pageable pageable);
-    // All products in a category
+    // All animals in a category
     Page<AnimalInfo> findAllInCategory(Integer categoryType, Pageable pageable);
 
     // increase stock
-    void increaseStock(String productId, int amount);
+    void increaseStock(String animalId, int amount);
 
     //decrease stock
-    void decreaseStock(String productId, int amount);
+    void decreaseStock(String animalId, int amount);
 
-    AnimalInfo offSale(String productId);
+    AnimalInfo offSale(String animalId);
 
-    AnimalInfo onSale(String productId);
+    AnimalInfo onSale(String animalId);
 
-    AnimalInfo update(AnimalInfo productInfo);
-    AnimalInfo save(AnimalInfo productInfo);
+    AnimalInfo update(AnimalInfo animalInfo);
+    AnimalInfo save(AnimalInfo animalInfo);
 
-    void delete(String productId);
+    void delete(String animalId);
 }

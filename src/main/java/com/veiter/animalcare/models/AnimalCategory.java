@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.DynamicUpdate;
+import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,6 +25,9 @@ public class AnimalCategory {
     @GeneratedValue
     private Integer categoryId;
     private String categoryName;
+
+    @NaturalId
+    private Integer categoryType;
 
     private Date creatTime;
     private Date updateTime;

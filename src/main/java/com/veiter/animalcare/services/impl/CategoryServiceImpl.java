@@ -6,10 +6,12 @@ import com.veiter.animalcare.models.AnimalCategory;
 import com.veiter.animalcare.repositories.AnimalCategoryRepository;
 import com.veiter.animalcare.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@Service
 public class CategoryServiceImpl implements CategoryService {
 
     @Autowired
@@ -18,7 +20,7 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public List<AnimalCategory> findAll() {
         List<AnimalCategory> res = animalCategoryRepository.findAllByOrderByCategoryType();
-        //  res.sort(Comparator.comparing(ProductCategory::getCategoryType));
+        //  res.sort(Comparator.comparing(AnimalCategory::getCategoryType));
         return res;
     }
 
@@ -33,7 +35,7 @@ public class CategoryServiceImpl implements CategoryService {
     public List<AnimalCategory> findByCategoryTypeIn(List<Integer> categoryTypeList) {
         List<AnimalCategory> res = animalCategoryRepository
                 .findByCategoryTypeInOrderByCategoryTypeAsc(categoryTypeList);
-        //res.sort(Comparator.comparing(ProductCategory::getCategoryType));
+        //res.sort(Comparator.comparing(AnimalCategory::getCategoryType));
         return res;
     }
 

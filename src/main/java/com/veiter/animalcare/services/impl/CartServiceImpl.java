@@ -14,12 +14,14 @@ import com.veiter.animalcare.services.AnimalService;
 import com.veiter.animalcare.services.CartService;
 import com.veiter.animalcare.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
 import java.util.Optional;
 import java.util.Set;
 
+@Service
 public class CartServiceImpl implements CartService {
 
     @Autowired

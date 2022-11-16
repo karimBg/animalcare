@@ -12,7 +12,7 @@ public interface CategoryService {
 
     List<AnimalCategory> findByCategoryTypeIn(List<Integer> categoryTypeList);
 
-    AnimalCategory save(AnimalCategory productCategory);
+    AnimalCategory save(AnimalCategory animalCategory);
 
 
 }

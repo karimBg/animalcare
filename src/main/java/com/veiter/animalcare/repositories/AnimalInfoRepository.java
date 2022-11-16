@@ -10,7 +10,7 @@ public interface AnimalInfoRepository extends JpaRepository<AnimalInfo, String> 
     AnimalInfo findByAnimalId(String id);
 
     // on sale animal
-    Page<AnimalInfo> findAllByAnimalSaleStatusOrderByAnimalIdAsc(Integer productStatus, Pageable pageable);
+    Page<AnimalInfo> findAllByAnimalSaleStatusOrderByAnimalIdAsc(Integer animalStatus, Pageable pageable);
 
     // animal in one category
     Page<AnimalInfo> findAllByAnimalTypeOrderByAnimalIdAsc(Integer categoryType, Pageable pageable);

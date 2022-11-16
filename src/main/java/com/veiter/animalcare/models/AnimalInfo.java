@@ -32,6 +32,9 @@ public class AnimalInfo {
     @NotNull
     private BigDecimal animalPrice;
 
+    @NotNull
+    private Integer animalStock;
+
     private String animalDescription;
 
     private String animalIcon;
